@@ -49,7 +49,7 @@ async function postHandler(req: NextApiRequest, res: NextApiResponse, token) {
     notification_url: process.env.NOTIFICATION_URL + "/api/webhook/mercadopago",
   });
   ///le envio el url donde el cliente tiene que entrar para hacer el pago
-  res.send({ url: pref.init_point });
+  res.send({ url: pref });
 }
 const handler = method({
   post: postHandler,
