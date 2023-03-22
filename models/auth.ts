@@ -1,4 +1,4 @@
-import { firestore } from "./firebase";
+import { firestore } from "../lib/firebase";
 import isAfter from "date-fns/isAfter";
 
 const collection = firestore.collection("auth");

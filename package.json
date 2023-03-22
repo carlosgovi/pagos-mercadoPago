@@ -8,10 +8,28 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next"
+    "start": "next",
+    "test": "ava"
+  },
+  "type": "module",
+  "ava": {
+    "nodeArguments": [
+      "--loader=@esbuild-kit/esm-loader",
+      "--experimental-specifier-resolution=node"
+    ],
+    "environmentVariables": {
+      "TESTING": "true",
+      "JWT_SECRET": "asdasdasasdasda"
+    },
+    "extensions": {
+      "ts": "module"
+    }
   },
   "dependencies": {
+    "@esbuild-kit/esm-loader": "^2.5.5",
+    "ava": "^5.2.0",
     "date-fns": "^2.29.3",
+    "esbuild-node-loader": "^0.8.0",
     "firebase-admin": "^11.5.0",
     "jsonwebtoken": "^9.0.0",
     "mercadopago": "^1.5.15",

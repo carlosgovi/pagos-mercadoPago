@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { generate } from "lib/jwt";
-import { Auth } from "lib/auth";
+import { Auth } from "models/auth";
 
 export default async function (req: NextApiRequest, res: NextApiResponse) {
   ///findByEmailAndCode busca el email y el code que me pasan por el body

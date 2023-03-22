@@ -1,4 +1,4 @@
-import { firestore } from "../firebase";
+import { firestore } from "../lib/firebase";
 
 const collection = firestore.collection("orders");
 ////**una buena opcion seria tipar toda la orden entera**/////
